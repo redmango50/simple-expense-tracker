@@ -26,18 +26,25 @@ button:hover{
     cursor: pointer;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+input{
+    padding: var(--sm);
+    border: 2px solid transparent;
+    transition: border-color 50ms ease;
+    outline: none;
+
+    &:hover, &:focus{
+        border-color: var(--accent);
+    }
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: var(--lg);
-    background-color: var(--bg);
+textarea {
+    padding: var(--xs);
+    line-height: 1.5;
+    border: 2px solid transparent;
+    transition: border-color 50ms ease;
+    outline: none;
+
+    &:hover, &:focus{
+        border-color: var(--accent);
+    }
 }

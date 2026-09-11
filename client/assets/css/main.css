@@ -59,3 +59,44 @@
 .actions-bar button {
     padding: var(--xs);
 }
+
+#create-expense-modal{
+    margin: auto;
+    padding: var(--md);
+    background-color: var(--bg-light);
+    border: none;
+}
+
+.create-expense-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--sm);
+    color: var(--text-primary);
+}
+
+.create-expense-field-wrapper{
+    display: grid;
+    gap: var(--xs);
+    padding: var(--sm);
+}
+
+.title{
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.field-label{
+    color: var(--text-muted);
+}
+
+#create-expense-submit{
+    width: 100%;
+    padding-inline: var(--xs);
+    padding-block: var(--sm);
+}
+
