@@ -3,6 +3,7 @@
 const createExpenseModal = document.getElementById('create-expense-modal')
 const createExpenseModalOpenBtn = document.getElementById('create-expense-trigger')
 const createExpenseModalCloseBtn = document.getElementById('create-expense-close')
+const submitBtn = document.getElementById('create-expense-submit')
 
 createExpenseModalOpenBtn.addEventListener('click', ()=>{
     createExpenseModal.showModal()
@@ -31,6 +32,8 @@ createExpenseModal.addEventListener('click', (event) => {
 const createExpenseForm = document.getElementById('create-expense-form')
 import { expenses } from './store.js'
 
+let loading = false
+
 createExpenseForm.addEventListener('submit', async(e)=>{
   e.preventDefault()
 
@@ -44,6 +47,9 @@ createExpenseForm.addEventListener('submit', async(e)=>{
     window.alert("Fields cannot be empty")
     return
   }
+
+  loading = true
+  LoadingStateUpdate()
 
   try{
     const payload = {title: title, category: category, description: description, amount: Number(amount)}
@@ -65,5 +71,23 @@ createExpenseForm.addEventListener('submit', async(e)=>{
   catch(err){
     console.error(err)
   }
+  finally{
+    loading = false
+    LoadingStateUpdate()
+    createExpenseModal.close()
+  }
 
 })
+
+function LoadingStateUpdate(){
+  if(loading){
+    submitBtn.innerText = 'Loading...'
+    submitBtn.ariaDisabled = 'true'
+    submitBtn.disabled = true
+  }
+  else{
+    submitBtn.innerText = 'Create'
+    submitBtn.ariaDisabled = 'false'
+    submitBtn.disabled = false   
+  }
+}

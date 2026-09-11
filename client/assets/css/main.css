@@ -136,7 +136,7 @@
     box-shadow: var(--shadow-card);
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     gap: var(--sm);
-    
+    width: 100%;
 }
 
 .item-wrapper, .item-actions{
@@ -149,6 +149,8 @@
 
 .item-actions{
     gap: var(--sm);
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .item-category-badge{

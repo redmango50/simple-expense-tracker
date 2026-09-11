@@ -50,3 +50,9 @@ export function getSearchedValue(){
         String(fieldValue).toLowerCase().includes(searchTerm.toLowerCase())
     )
 }
+
+export function getCurrentSearch(){
+    console.log(search)
+    return search
+    
+}

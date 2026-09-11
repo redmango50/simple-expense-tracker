@@ -1,9 +1,10 @@
 import { 
   sortingMetod, 
-  search, 
+  getCurrentSearch, 
   getExpensesDefault, 
   getExpensesByHighest, 
-  getExpensesByLowest 
+  getExpensesByLowest, 
+  getTotal
 } from './store.js';
 
 function escapeHTML(str) {
@@ -24,6 +25,8 @@ function getProcessedExpenses() {
     items = getExpensesDefault();
   }
 
+  const search = getCurrentSearch()
+
   if (search && search.trim() !== '') {
     const query = search.toLowerCase();
     items = items.filter(item => {
@@ -32,7 +35,7 @@ function getProcessedExpenses() {
       const category = String(item.category || '').toLowerCase();
 
       return title.includes(query) || description.includes(query) || category.includes(query);
-    });
+    })
   }
 
   return items;
@@ -69,7 +72,7 @@ export function renderExpenses(selector = '.items-list') {
     .join('');
 }
 
-export function initRenderer(onDelete) {
+export async function initRenderer(onDelete) {
   document.addEventListener('update:sort', () => renderExpenses());
 
   const listContainer = document.querySelector('.items-list');
@@ -82,4 +85,11 @@ export function initRenderer(onDelete) {
       }
     });
   }
+}
+
+const display = document.querySelector('.expense-card-amount')
+
+export function RenderDisplay(){
+  const total = getTotal()
+  display.innerText = total
 }

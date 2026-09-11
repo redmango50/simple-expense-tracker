@@ -5,4 +5,5 @@ searchField.addEventListener('input', (e)=>{
     const searchVal = e.target.value
 
     setSearch(searchVal)
+    document.dispatchEvent(new CustomEvent('update:expense'))
 })
