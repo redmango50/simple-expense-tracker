@@ -28,7 +28,7 @@ If you do not have Git installed, download it from the [Official Git Website](ht
 
 ```bash
 # Clone this repository
-git clone https://github.com
+git clone https://github.com/redmango50/simple-expense-tracker
 
 # Navigate into the project directory
 cd simple-expense-tracker
