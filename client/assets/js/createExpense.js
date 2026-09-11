@@ -60,6 +60,7 @@ createExpenseForm.addEventListener('submit', async(e)=>{
 
     const created = await response.json()
     expenses.push(created)
+    document.dispatchEvent(new CustomEvent('update:expense'))
   }
   catch(err){
     console.error(err)

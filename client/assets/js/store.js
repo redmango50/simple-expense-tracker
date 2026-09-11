@@ -1,6 +1,7 @@
 export let expenses = []
+export let sortingMetod = 'default'
 
-async function fetchExpenses(){
+export async function fetchExpenses(){
     try{
         const response = await fetch("http://localhost:9000/expenses")
         
@@ -9,13 +10,32 @@ async function fetchExpenses(){
         }
 
         const fetchedExpenses = await response.json()
-        expenses = fetchExpenses
+        expenses = fetchedExpenses
     }
     catch(err){
         console.error(err)
     }
 }
 
-function getExpensesDefault(){
-    return expenses
+export function getExpensesDefault(){
+    return [...expenses]
+}
+
+export function getTotal(){
+    return expenses.reduce((prev, current)=>{
+        return prev + current.amount
+    }, 0)
+}
+
+export function setSortingMethod(value){
+    sortingMetod = value
+    document.dispatchEvent(new CustomEvent('update:sort'))
+}
+
+export function getExpensesByHighest(){
+    return [...expenses].sort((a, b) => b.amount - a.amount)
+}
+
+export function getExpensesByLowest(){
+    return [...expenses].sort((a, b) => a.amount - b.amount)
 }

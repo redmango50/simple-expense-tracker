@@ -1,0 +1,35 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    padding: var(--md);
+    display: none;
+    position: absolute;
+    background-color: var(--bg-light);
+    box-shadow: var(--shadow-card);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-title{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: var(--sm);
+}
+
+.dropdown-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--xs);
+    width: 100%;
+}

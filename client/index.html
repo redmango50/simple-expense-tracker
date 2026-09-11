@@ -21,13 +21,21 @@
 
     <div class="actions-bar">
       <div class="actions-bar-group">
-        <button class="ghost-btn">
-          <i class="fa-solid fa-sort"></i>
-        </button>
-        <button class="ghost-btn">
-          <i class="fa-solid fa-filter"></i>
-        </button>
+        <div class="dropdown">
+          <button class="ghost-btn">
+            <i class="fa-solid fa-filter"></i>
+          </button>
+          <div class="dropdown-content">
+            <div class="dropdown-title">Sort by</div>
+            <div class="dropdown-actions">
+              <button class="menu-btn sorting-handler" data-sort="default">Default</button>
+              <button class="menu-btn sorting-handler" data-sort="highest">Highest</button>
+              <button class="menu-btn sorting-handler" data-sort="lowest">Lowest</button>
+            </div>
+          </div>
+        </div>
       </div>
+      <input spellcheck="false" id="search" class="input-text" type="text" placeholder="Search expense" />
       <button id="create-expense-trigger" class="primary-btn">
         <i class="fa-solid fa-plus"></i>
       </button>
@@ -61,7 +69,8 @@
 
       <div class="create-expense-field-wrapper">
         <label class="field-label" for="description">Description</label>
-        <textarea cols="5" class="input-text" name="description" id="description" placeholder="Enter description"></textarea>
+        <textarea cols="5" class="input-text" name="description" id="description"
+          placeholder="Enter description"></textarea>
       </div>
 
       <div class="create-expense-field-wrapper">
@@ -71,6 +80,8 @@
   </dialog>
 
   <script type="module" src="./assets/js/createExpense.js"></script>
+  <script type="module" src="./assets/js/sortExpense.js"></script>
+  <script type="module" src="./assets/js/store.js"></script>
 </body>
 
 </html>

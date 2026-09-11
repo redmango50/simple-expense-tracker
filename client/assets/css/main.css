@@ -1,6 +1,7 @@
 @import "./variables.css";
 @import "./component.css";
 @import "./layer.css";
+@import "./filterSheet.css";
 @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
 
 .container{
@@ -102,5 +103,9 @@
 
 #create-expense-close{
     align-self: flex-end;
+}
+
+#search{
+    padding: var(--xs);
 }
 
