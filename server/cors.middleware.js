@@ -1,13 +1,13 @@
-export async function corsMiddleware(req, next){
+export async function corsMiddleware(req, next) {
 
     const corsHeaders = {
-        "Access-Control-Allow-Origin": "http://localhost:5500",
+        "Access-Control-Allow-Origin": '*',
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
         "Access-Control-Allow-Headers": "Content-Type",
         "Access-Control-Max-Age": "86400",
     }
 
-    if(req.method === 'OPTIONS'){
+    if (req.method === 'OPTIONS') {
         return new Response(null, {
             status: 204,
             headers: {

@@ -100,3 +100,7 @@
     padding-block: var(--sm);
 }
 
+#create-expense-close{
+    align-self: flex-end;
+}
+
