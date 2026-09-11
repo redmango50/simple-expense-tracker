@@ -1,5 +1,6 @@
 export let expenses = []
 export let sortingMetod = 'default'
+export let search = ''
 
 export async function fetchExpenses(){
     try{
@@ -38,4 +39,14 @@ export function getExpensesByHighest(){
 
 export function getExpensesByLowest(){
     return [...expenses].sort((a, b) => a.amount - b.amount)
+}
+
+export function setSearch(searchVal){
+    search = searchVal
+}
+
+export function getSearchedValue(){
+    return Object.values(expenses).some(fieldValue => 
+        String(fieldValue).toLowerCase().includes(searchTerm.toLowerCase())
+    )
 }

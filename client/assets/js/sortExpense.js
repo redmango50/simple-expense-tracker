@@ -5,7 +5,5 @@ const sortingBtn = document.querySelectorAll('.sorting-handler')
 sortingBtn.forEach((btn) => {
     btn.addEventListener('click', () => {
         setSortingMethod(btn.dataset.sort) 
-        console.log(btn.dataset.sort)
     })
-    
 })
