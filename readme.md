@@ -35,9 +35,9 @@ cd simple-expense-tracker
 ```
 
 ### Option B: Direct Download
-1.Click the green **Code** button at the top of this GitHub page.
-2.Select **Download ZIP**.
-3.Extract the ZIP file and open the extracted folder in VS Code.
+1. Click the green **Code** button at the top of this GitHub page.
+2. Select **Download ZIP**.
+3. Extract the ZIP file and open the extracted folder in VS Code.
 
 ## Starting The Application
 
@@ -45,7 +45,7 @@ Before you begin, ensure you are in the project's root directory.
 
 ### Starting Frontend
  
-1  Navigate into the `client` folder.
+1.  Navigate into the `client` folder.
 2. Open `index.html` inside VS Code.
 3. Click **Go Live** in the VS Code status bar.
 
