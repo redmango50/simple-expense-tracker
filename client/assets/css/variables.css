@@ -1,0 +1,31 @@
+:root { 
+  --accent: hsl(215 53.8% 36.1%); 
+  --bg-dark: hsl(0 0% 5%); 
+  --bg: hsl(0 0% 10%); 
+  --bg-light: hsl(0 0% 15%); 
+  --text-primary: hsl(0 0% 95%); 
+  --text-muted: hsl(0 0% 70%); 
+  --border-color: hsl(0 0% 25%);
+  --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.4), 0 1px 2px -1px hsl(0 0% 0% / 0.4);
+  --shadow-card-inset: inset 0 1px 2px 0 hsl(0 0% 0% / 0.6);
+  --shadow-accent-focus: 0 0 0 2px hsl(215 53.8% 36.1% / 0.4);
+  --xs: 0.25rem; 
+  --sm: 0.5rem; 
+  --md: 1rem; 
+  --lg: 1.25rem; 
+  --xl: 1.5rem; 
+}
+
+@media (prefers-color-scheme: light) {
+  :root{
+    --bg-dark: hsl(0 0% 85%);
+    --bg: hsl(0 0% 90%);
+    --bg-light: hsl(0 0% 95%);
+    --text-primary: hsl(0 0% 10%);
+    --text-muted: hsl(0 0% 40%);
+    --border-color: hsl(0 0% 85%);
+    --shadow-card: 0 1px 2px 0 hsl(0 0% 0% / 0.05), 0 1px 3px 0 hsl(0 0% 0% / 0.08);
+    --shadow-card-inset: inset 0 1px 3px 0 hsl(0 0% 0% / 0.08);
+    --shadow-accent-focus: 0 0 0 2px hsl(215 53.8% 36.1% / 0.25);
+  } 
+}

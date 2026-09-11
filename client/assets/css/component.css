@@ -1,0 +1,17 @@
+.primary-btn{
+    background-color: var(--accent);
+    transition: opacity 50ms ease;
+
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+.ghost-btn{
+    background-color: var(--bg-light);
+    transition: background-color 50ms ease;
+
+    &:hover{
+        background-color: var(--bg);
+    }
+}

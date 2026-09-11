@@ -1,0 +1,61 @@
+@import "./variables.css";
+@import "./component.css";
+@import "./layer.css";
+@import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg);
+    padding: var(--md);
+    color: var(--text-muted);
+    gap: var(--xl);
+}
+
+.expense-card{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: var(--shadow-card);
+    background-color: var(--bg-light);
+    padding: var(--md);
+}
+
+.expense-card-title{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.expense-card-amount{
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+
+    &::before{
+        content: '$';
+        margin-right: var(--xs);
+        color: var(--text-muted);
+        font-weight: 400;
+    }
+}
+
+.actions-bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-card);
+    background-color: var(--bg-light);
+    padding: var(--sm);
+}
+
+.actions-bar button {
+    padding: var(--xs);
+}

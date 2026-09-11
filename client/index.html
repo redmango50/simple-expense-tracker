@@ -1,13 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expense Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <title>Simple Expense Tracker</title>
 </head>
 <body>
-    
-    
 
+  <div class="container">
+    <div class="expense-card">
+      <span class="expense-card-title">Total</span>
+      <h1 class="expense-card-amount">12000</h1>
+    </div>
+
+    <div class="actions-bar">
+      <div class="actions-bar-group">
+        <button class="ghost-btn">
+          <i class="fa-solid fa-sort"></i>
+        </button>
+        <button class="ghost-btn">
+          <i class="fa-solid fa-filter"></i>
+        </button>
+      </div>
+      <button id="create-expense" class="primary-btn">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="./assets/js/ui.js"></script>
 </body>
 </html>
